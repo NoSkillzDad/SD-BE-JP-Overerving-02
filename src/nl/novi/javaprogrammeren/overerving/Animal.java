@@ -5,30 +5,15 @@ public abstract class Animal {
     Gender gender;
 
     public enum Gender {
-        MALE("M", "Male"), FEMALE("F", "Female");
-        private String code;
-        private String text;
-
-        private Gender(String code, String text) {
-            this.code = code;
-            this.text = text;
-        }
-
-        public static Gender getGenderByCode(String code) {
-            for (Gender gender : Gender.values()) {
-                if (gender.code.equals(code)) {
-                    return gender;
-                }
-            }
-            return null;
-        }
-
+        MALE,
+        FEMALE;
     }
 
     //Constructor
 
     public Animal(String name, Gender gender) {
         this.name = name;
+        this.gender = gender;
     }
 
     public String getName() {
@@ -41,7 +26,7 @@ public abstract class Animal {
 
 // Methods
 
-    public void move() {git
+    public void move() {
         System.out.println("0.25m");
     }
 
